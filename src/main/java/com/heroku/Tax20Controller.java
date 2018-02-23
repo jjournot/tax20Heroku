@@ -30,7 +30,7 @@ public class Tax20Controller
 	 * @return the tax amount
 	 */
 	@RequestMapping("/tax20/{amount}")
-	public ResponseEntity<BigDecimal> calculateTax17(@PathVariable BigDecimal amount)
+	public ResponseEntity<BigDecimal> calculateTax20(@PathVariable BigDecimal amount)
 	{
 		LOG.debug("======= Calculate the amount of tax for the following amount : " + amount);
 		return new ResponseEntity<BigDecimal>(amount.divide(ONE_HUNDRED).multiply(TWENTY), HttpStatus.OK);
